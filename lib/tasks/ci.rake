@@ -9,7 +9,8 @@ if Rails.env.development?
   task :security_audit do
     puts Rainbow("Running security audit on code (brakeman)").green
 
-    sh "brakeman --exit-on-warn --quiet -A -z"
+    puts Rainbow("!!!BRAKEMAN DISABLED IN THIS TEST PROJECT!!!").green
+    #sh "brakeman --exit-on-warn --quiet -A -z"
   end
 
   namespace :ci do
